@@ -4,6 +4,9 @@ import java.util.Arrays;
  * Given a sorted list of integers, this program finds the smallest k values,
  * each of which can either be a number from the list or the sum of any two or
  * three numbers in the list.  It runs in O(n^3 lg n) time.
+ *
+ * @author      John Kurlak <john@kurlak.com>
+ * @date        12/13/2012
  */
 public class KSmallestWithCombosOf2And3 {
     /**
