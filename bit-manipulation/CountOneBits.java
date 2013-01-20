@@ -8,11 +8,22 @@
  * @date        1/20/2013
  */
 public class CountOneBits {
+    /**
+     * Runs the program with an example number.
+     *
+     * @param args      The command-line arguments.
+     */
     public static void main(String[] args) {
         int num = 30;
         System.out.println("There are " + countOneBits(num) + " bits in the binary representation of " + num + ".");
     }
 
+    /**
+     * Counts the number of 1s in the binary representation of the given
+     * integer.
+     *
+     * @param num       The input number.
+     */
     public static int countOneBits(int num) {
         int count = 0;
 
