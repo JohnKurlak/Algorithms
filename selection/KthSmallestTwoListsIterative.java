@@ -7,7 +7,7 @@
  */
 public class KthSmallestTwoListsIterative {
     /**
-     * Runs the program with  an example list.
+     * Runs the program with an example list.
      *
      * @param args      The command-line arguments.
      */
