@@ -3,7 +3,7 @@
  * of two sorted lists in O(lg k) time.
  *
  * @author      John Kurlak <john@kurlak.com>
- * @date        11/7/2013
+ * @date        11/7/2012
  */
 public class KthSmallestTwoListsRecursive {
     /**

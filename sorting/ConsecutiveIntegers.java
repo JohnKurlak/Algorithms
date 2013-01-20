@@ -3,7 +3,7 @@
  * rearranged into a list of consecutive integers in O(n) time.
  *
  * @author      John Kurlak <john@kurlak.com>
- * @date        12/8/2013
+ * @date        12/8/2012
  */
 public class ConsecutiveIntegers {
     /**
@@ -45,14 +45,15 @@ public class ConsecutiveIntegers {
         }
 
         int min = list[0];
-        int numProcessed = 0;
 
         // Find the minimum value in the list
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i < n; i++) {
             if (list[i] < min) {
                 min = list[i];
             }
         }
+
+        int numProcessed = 0;
 
         // Iterate over a maximum of n values, placing each list item into
         // its expected index
@@ -61,21 +62,18 @@ public class ConsecutiveIntegers {
             int expectedIndex = temp - min;
 
             while (expectedIndex != i) {
-                if (expectedIndex > n - 1) {
+                if (expectedIndex > n - 1 || numProcessed == n) {
                     return false;
                 }
 
+                // Swap list[i] and list[expectedIndex]
                 list[i] = list[expectedIndex];
                 list[expectedIndex] = temp;
 
-                numProcessed++;
-
-                if (numProcessed > n) {
-                    return false;
-                }
-
+                // Update temp, expectedIndex, and numProcessed
                 temp = list[i];
                 expectedIndex = temp - min;
+                numProcessed++;
             }
         }
 
