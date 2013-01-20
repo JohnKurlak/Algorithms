@@ -17,7 +17,6 @@ public class GoldbachsConjecture {
      * @param args      The command-line arguments.
      */
     public static void main(String[] args) {
-        int num = 56;
         ArrayList<Pair> pairs = getPrimeSummands(100);
 
         for (Pair pair : pairs) {
