@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /**
  * This program iteratively finds the kth smallest number in the concatenation
  * of two sorted lists in O(lg k) time.
@@ -8,8 +6,6 @@ import java.util.Arrays;
  * @date        1/17/2013
  */
 public class KthSmallestTwoListsIterative {
-    static int[] list3;
-
     /**
      * Runs the program with  an example list.
      *
