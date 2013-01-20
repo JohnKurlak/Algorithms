@@ -70,8 +70,8 @@ public class FibonacciTesterAlgebraicMethod {
     public static boolean isPerfectSquare(BigDecimal num, BigDecimal min, BigDecimal max) {
         while (max.compareTo(min) > 0) {
             BigDecimal mid = max.divide(two).add(min.divide(two));
-            BigDecimal midRounded = mid.setScale(0, BigDecimal.ROUND_DOWN);
-            BigDecimal currentSquare = midRounded.multiply(midRounded);
+            BigDecimal midFloor = mid.setScale(0, BigDecimal.ROUND_DOWN);
+            BigDecimal currentSquare = midFloor.multiply(midFloor);
             int comparison = currentSquare.compareTo(num);
 
             if (comparison < 0) {
