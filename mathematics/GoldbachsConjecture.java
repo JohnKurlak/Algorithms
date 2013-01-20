@@ -4,7 +4,8 @@ import java.util.ArrayList;
 /**
  * According to Goldbach's Conjecture, every even integer greater than
  * two can be expressed as the sum of two primes.  This program lists
- * all pairs that add up to a given even number in O(n lg lg n) time.
+ * all pairs of primes that add up to a given even number in
+ * O(n lg lg n) time.
  *
  * @author      John Kurlak <john@kurlak.com>
  * @date        1/10/2013
