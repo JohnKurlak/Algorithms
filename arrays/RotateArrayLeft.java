@@ -1,6 +1,6 @@
 /**
  * This program rotates all of the elements in an array left by a given k
- * value.  It runs in O(n) time and uses O(1) additional space (it operates
+ * k value.  It runs in O(n) time and uses O(1) additional space (it operates
  * in-place).
  *
  * @author      John Kurlak <john@kurlak.com>
@@ -44,7 +44,7 @@ public class RotateArrayLeft {
         }
 
         // Ensure k is in interval [0, n)
-        k %= n;
+        k = ((k % n) + n) % n;
 
         // Rotate the array
         reverseArray(array, 0, k - 1);
