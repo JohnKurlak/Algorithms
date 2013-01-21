@@ -39,7 +39,7 @@ public class RotateArrayLeft {
         int n = array.length;
         int origIndex = 0;
 
-        // Place each array item into its shifted index
+        // Place each array item into its rotated index
         for (int i = 0; i < n; i++) {
             int shiftedIndex = (origIndex - k) % n;
             if (shiftedIndex < 0) {
