@@ -36,7 +36,7 @@ public class Quickselect {
     }
 
     /**
-     * Recursively etermines the kth order statistic for the given list.
+     * Recursively determines the kth order statistic for the given list.
      *
      * @param list          The list.
      * @param leftIndex     The left index of the current sublist.
