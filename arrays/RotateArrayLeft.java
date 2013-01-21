@@ -1,6 +1,6 @@
 /**
  * This program rotates all of the elements in an array left by a given k
- * k value.  It runs in O(n) time and uses O(1) additional space (it operates
+ * value.  It runs in O(n) time and uses O(1) additional space (it operates
  * in-place).
  *
  * @author      John Kurlak <john@kurlak.com>
