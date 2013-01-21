@@ -17,7 +17,7 @@ public class RotateArrayLeft {
         int k = 3;
 
         printArray(array);
-        System.out.println("shifted to the left " + k + " is:");
+        System.out.println("rotated to the left " + k + " is:");
         rotateArrayLeft(array, k);
         printArray(array);
     }
@@ -32,6 +32,10 @@ public class RotateArrayLeft {
      * @param k     The number of indices by which to shift the array.
      */
     public static void rotateArrayLeft(int[] array, int k) {
+        if (array == null) {
+            return;
+        }
+
         int n = array.length;
         int origIndex = 0;
 
@@ -54,6 +58,11 @@ public class RotateArrayLeft {
      */
     public static void printArray(int[] array) {
         System.out.print("{ ");
+
+        if (array == null) {
+            System.out.println("}");
+            return;
+        }
 
         for (int i = 0; i < array.length; i++) {
             String separator = (i == (array.length - 1)) ? " " : ", ";
