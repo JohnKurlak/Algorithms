@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @author      John Kurlak <john@kurlak.com>
  * @date        5/30/2013
  */
-public class RotateArrayLeftBlockSwapAlgorithm {
+public class BlockSwapAlgorithm {
     /**
      * Runs the program with an example array.
      *

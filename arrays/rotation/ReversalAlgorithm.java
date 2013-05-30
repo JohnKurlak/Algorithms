@@ -6,16 +6,16 @@ import java.util.Arrays;
  * in-place).
  *
  * @author      John Kurlak <john@kurlak.com>
- * @date        5/30/2013
+ * @date        1/20/2013
  */
-public class RotateArrayLeftJugglingAlgorithm {
+public class ReversalAlgorithm {
     /**
      * Runs the program with an example array.
      *
      * @param args      The command-line arguments.
      */
     public static void main(String[] args) {
-        int[] array = new int[] { 1, 2, 3, 4, 5, 6, 7 };
+        int[] array = new int[] { 5, 3, 2, 18, 20 };
         int k = 2;
 
         System.out.println(Arrays.toString(array));
@@ -48,43 +48,36 @@ public class RotateArrayLeftJugglingAlgorithm {
         // Ensure k is in interval [0, n)
         k = ((k % n) + n) % n;
 
-        // Perform juggling algoritm
-        for (int i = 0, gcd = gcd(k, n); i < gcd; i++) {
-            int temp = array[i];
-            int j = i;
+        // Rotate the array
+        reverseArray(array, 0, k - 1);
+        reverseArray(array, k, n - 1);
+        reverseArray(array, 0, n - 1);
+    }
 
-            while (true) {
-                int p = j + k;
-
-                if (p >= n) {
-                    p = p - n;
-                }
-
-                if (p == i) {
-                    break;
-                }
-
-                array[j] = array[p];
-                j = p;
-            }
-
-            array[j] = temp;
+    /**
+     * Reverses all values in an array from the given start index to the given end index.
+     * The reversal happens in-place, so there is no return value.
+     *
+     * @param array         The array to reverse.
+     * @param startIndex    The start index of the subarray to reverse.
+     * @param endIndex      The end index of the subarray to reverse.
+     */
+    public static void reverseArray(int[] array, int startIndex, int endIndex) {
+        for (int leftIndex = startIndex, rightIndex = endIndex; leftIndex < rightIndex; leftIndex++, rightIndex--) {
+            swap(array, leftIndex, rightIndex);
         }
     }
 
     /**
-     * Uses Euclid's algorithm to find the greatest common divisor of
-     * two numbers.
+     * Swaps two elements in an array.
      *
-     * @param a     The first number.
-     * @param b     The second number.
-     * @returns     The great common divisor of `a` and `b`.
+     * @param array     The array.
+     * @param index1    The index of the first element to swap.
+     * @param index2    The index of the second element to swap.
      */
-    public static int gcd(int a, int b) {
-        if (b == 0) {
-            return a;
-        } else {
-            return gcd(b, a % b);
-        }
+    public static void swap(int[] array, int index1, int index2) {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 }
