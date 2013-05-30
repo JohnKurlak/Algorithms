@@ -69,15 +69,15 @@ public class RotateArrayLeftReversalAlgorithm {
     }
 
     /**
-     * Swaps two elements in a list.
+     * Swaps two elements in an array.
      *
-     * @param list      The list.
+     * @param array     The array.
      * @param index1    The index of the first element to swap.
      * @param index2    The index of the second element to swap.
      */
-    public static void swap(int[] list, int index1, int index2) {
-        int temp = list[index1];
-        list[index1] = list[index2];
-        list[index2] = temp;
+    public static void swap(int[] array, int index1, int index2) {
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
     }
 }
