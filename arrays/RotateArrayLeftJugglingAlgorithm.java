@@ -6,7 +6,7 @@ import java.util.Arrays;
  * in-place).
  *
  * @author      John Kurlak <john@kurlak.com>
- * @date        1/20/2013
+ * @date        5/30/2013
  */
 public class RotateArrayLeftJugglingAlgorithm {
     /**
